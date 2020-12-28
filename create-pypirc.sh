@@ -6,7 +6,7 @@ index-servers = local
 [local]
 repository: https://smanisha.jfrog.io/artifactory/api/pypi/pipelines-pypi
 username: $res_demoArt_url
-password: $res_demoArt_apikey
+password: $artifactory_password
 EOF
 
 echo "Created .pypirc file: Here it is: "
