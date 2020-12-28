@@ -25,7 +25,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name:  demoArt  # required
+            - name: demoArt  # required
             - name: demoArt_password
           inputResources:
             - name: python_repo_jfp_example         # required
@@ -33,7 +33,7 @@ pipelines:
             - name: python_buildinfo_jfp_example         # required
         execution:
           onExecute:
-            - echo $res_demoArt_password_artifactory_password
+            - echo $int_demoArt_password_artifactory_password
             - pushd $res_python_repo_jfp_example_resourcePath
             - ./create-pypirc.sh
             - pip install -r requirements.txt
