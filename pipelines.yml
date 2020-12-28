@@ -37,10 +37,10 @@ pipelines:
             - pushd $res_python_repo_jfp_example_resourcePath
             - ./create-pypirc.sh
             - pip install -r requirements.txt
-            - python setup.py sdist upload -r local
-            - python setup.py bdist_wheel upload -r local
             # Configure Artifactory instance with JFrog CLI
             - ./jfrog rt config --url $res_demoArt_url --user $res_demoArt_user --apikey $res_demoArt_apikey
+            - python setup.py sdist upload -r local
+            - python setup.py bdist_wheel upload -r local
             # Collect build environment variables and build tools information using JFrog CLI
             - ./jfrog rt bce pipelines-python-sample $run_number
             # Publish build information to Artifactory
