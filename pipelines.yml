@@ -32,7 +32,7 @@ pipelines:
             - name: python_buildinfo_jfp_example         # required
         execution:
           onExecute:
-            - pushd $res_python_repo_jfp_example_path
+            - pushd $res_python_repo_jfp_example_resourcePath
             - ./create-pypirc.sh
             - pip install -r requirements.txt
             - python setup.py sdist upload -r local
