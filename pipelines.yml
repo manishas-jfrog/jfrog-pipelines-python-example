@@ -26,9 +26,9 @@ pipelines:
         configuration:
           integrations:
             - name:  demoArt  # required
+            - name: demoArt_password
           inputResources:
             - name: python_repo_jfp_example         # required
-            - name: demoArt_password
           outputResources:
             - name: python_buildinfo_jfp_example         # required
         execution:
