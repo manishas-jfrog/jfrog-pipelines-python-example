@@ -33,7 +33,7 @@ pipelines:
             - name: python_buildinfo_jfp_example         # required
         execution:
           onExecute:
-            - echo $artifactory_password
+            - echo $res_demoArt_password_artifactory_password
             - pushd $res_python_repo_jfp_example_resourcePath
             - ./create-pypirc.sh
             - pip install -r requirements.txt
